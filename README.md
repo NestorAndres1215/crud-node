@@ -1,20 +1,16 @@
-# Node.js MySQL CRUD con EJS
+# 📋 CRUD con Node.js, MySQL y EJS
 
-Este proyecto es una aplicación web CRUD desarrollada con Node.js y MySQL. Utiliza EJS para el diseño de las vistas y permite realizar operaciones básicas de creación, lectura, actualización y eliminación de datos. La aplicación está diseñada para mostrar cómo integrar Node.js con una base de datos MySQL, con un enfoque en la implementación de un sistema de gestión de datos con una interfaz de usuario intuitiva.
+## 🎯 Objetivo
+Este proyecto proporciona una aplicación web que permite realizar operaciones CRUD (Crear, Leer, Actualizar, Eliminar) sobre una base de datos MySQL. Utiliza Node.js con Express para el backend, EJS como motor de plantillas para el frontend, y Bootstrap para el diseño responsivo.
 
-## Características
+## 📝 Descripción
+La aplicación permite gestionar empleados en una base de datos MySQL. Los usuarios pueden agregar, editar, eliminar y visualizar registros de empleados a través de una interfaz web sencilla y moderna.
 
-- CRUD completo (Crear, Leer, Actualizar, Eliminar) de datos.
-- Integración con MySQL para la gestión de la base de datos.
-- Uso de EJS para generar dinámicamente las vistas en el servidor.
-- Código modular y fácil de mantener.
+## 🧩 Tecnologías y Dependencias
 
-## Tecnologías
-
-- Node.js
-- MySQL
-- EJS
-- Express.js
-
-
+- **Node.js**: Entorno de ejecución para JavaScript en el servidor.
+- **Express**: Framework para aplicaciones web en Node.js.
+- **EJS**: Motor de plantillas para generar HTML con JavaScript.
+- **MySQL**: Sistema de gestión de bases de datos relacional.
+- **Bootstrap**: Framework de diseño para crear interfaces web responsivas.
 
