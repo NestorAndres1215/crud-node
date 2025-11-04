@@ -1,24 +1,31 @@
-  // Script para efecto de scroll en la navbar
-  window.addEventListener("scroll", function () {
-    const navbar = document.querySelector(".navbar");
+document.addEventListener("DOMContentLoaded", () => {
+  const navbar = document.querySelector(".navbar");
+  const navItems = document.querySelectorAll(".nav-item .nav-link");
+
+  // Función para manejar efecto scroll en navbar
+  const handleScroll = () => {
     if (window.scrollY > 50) {
       navbar.classList.add("scrolled");
     } else {
       navbar.classList.remove("scrolled");
     }
-  });
+  };
 
-  // Script para marcar la página actual como activa
-  document.addEventListener("DOMContentLoaded", function () {
-    const currentLocation = location.pathname;
-    const navItems = document.querySelectorAll(".nav-item");
+  // Función para marcar la página activa
+  const setActiveNavLink = () => {
+    const currentPath = window.location.pathname;
 
-    navItems.forEach((item) => {
-      const navLink = item.querySelector(".nav-link");
-      if (navLink && navLink.getAttribute("href") === currentLocation) {
-        item.classList.add("active");
-      } else {
-        item.classList.remove("active");
-      }
+    navItems.forEach(link => {
+      // Comparar solo la ruta, ignorando query params
+      const linkPath = new URL(link.href).pathname;
+      link.classList.toggle("active", linkPath === currentPath);
     });
-  });
+  };
+
+  // Inicializar
+  handleScroll();
+  setActiveNavLink();
+
+  // Eventos
+  window.addEventListener("scroll", handleScroll);
+});
